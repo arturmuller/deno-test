@@ -2,10 +2,11 @@
   "deploy": {
     "project": "2395e7e9-ea3a-4897-8fdd-e71c0ce90135",
     "exclude": [
-      "**/node_modules"
+      "**/node_modules",
+      ".env"
     ],
     "include": [
-      "./main.ts"
+      "."
     ],
     "entrypoint": "main.ts"
   },
@@ -14,6 +15,7 @@
   },
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env --watch main.ts",
-    "start": "deno run --allow-net --allow-read --allow-env main.ts"
+    "start": "deno run --allow-net --allow-read --allow-env main.ts",
+    "deploy": "deployctl deploy"
   }
 }
